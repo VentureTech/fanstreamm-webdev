@@ -1,0 +1,88 @@
+@import "../Config/base-import";
+
+.organize-group-con {
+  span {
+    font-family: $font-stack-italic;
+  }
+
+  .seat-type {
+    select {
+      display: block;
+      margin-top: 2px;
+      width: auto;
+    }
+  }
+
+  .number-tickets {
+    input {
+      max-width: 50px;
+    }
+  }
+
+  @include breakpoint($bp-tablets-landscape) {
+    .name {
+      input {
+        max-width: 600px;
+      }
+    }
+
+    .seat-type {
+      select {
+        max-width: 200px;
+      }
+    }
+
+    .number-tickets {
+      input {
+        display: block;
+        margin-top: 2px;
+      }
+    }
+
+    .actions {
+      text-align: left;
+    }
+  }
+}
+
+#enclosing2 {
+  .main-content-con {
+    @include breakpoint($bp-tablets-portrait) {
+      width: 58%;
+      padding-right: 20px;
+    }
+    @include breakpoint($bp-tablets-landscape) {
+      width: 68%;
+    }
+  }
+
+  .sidebar {
+    .seating-chart {
+      padding-top: $vertical-element-spacing;
+      border-top: 1px solid $color-lighter-gray;
+      text-align: center;
+
+      img {
+        max-width: 300px;
+        
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+
+    @include breakpoint($bp-tablets-portrait) {
+      width: 40%;
+      border-left: 1px solid $color-lighter-gray;
+
+      .seating-chart {
+        img {
+          max-width: 100%;
+        }
+      }
+    }
+    @include breakpoint($bp-tablets-landscape) {
+      width: 30%;
+    }
+  }
+}

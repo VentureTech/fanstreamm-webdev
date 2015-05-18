@@ -1,0 +1,106 @@
+@import "../Config/base-import";
+
+#enclosing2 {
+  .main-content-con {
+    @include breakpoint($bp-tablets-portrait) {
+      @include inlineTop;
+      width: 67%;
+      padding-right: 20px;
+      margin-right: 20px;
+      border-right: 1px solid $color-lighter-gray;
+    }
+    @include breakpoint($bp-tablets-landscape) {
+      width: 76%;
+    }
+  }
+
+  .sidebar {
+    @include breakpoint($bp-tablets-landscape) {
+      width: 20%;
+    }
+  }
+}
+
+.public-client-logo {
+  .client-logo {
+    .logo {
+      display: none;
+    }
+  }
+}
+
+
+.invitation-submit-result,
+.instruction {
+  font-size: 16px;
+  font-family: $font-stack-bolditalic;
+}
+
+.genform {
+  .invitation-submit {
+    margin-top: $vertical-element-spacing;
+
+    .val {
+      display: block;
+      width: auto;
+    }
+
+    .actions {
+      button.btn {
+        background-color: $color-fanstreamm-red;
+
+        &:first-child {
+          background-color: $color-accepted-green;
+        }
+      }
+    }
+  }
+}
+
+.invitation-response {
+  .actions {
+    @include pie-clearfix;
+
+    &:after {
+      clear: both;
+      content: '';
+      display: block;
+    }
+
+    button.btn {
+      @extend %cta_btn;
+      display: block;
+      margin: 0 0 10px;
+      float: none;
+      width: 100%;
+      padding: 10px;
+      background-color: $color-fanstreamm-red;
+
+      + button.btn {
+        margin: 0 0 10px;
+      }
+
+      &:first-child {
+        background-color: $color-accepted-green;
+      }
+    }
+
+    @include breakpoint($bp-tablets-portrait) {
+      text-align: right;
+
+      button.btn {
+        @include inlineTop;
+        width: auto;
+
+        + button.btn {
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+}
+
+.heading.details {
+  margin-top: $vertical-element-spacing*2;
+
+}

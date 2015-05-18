@@ -1,0 +1,16 @@
+@import "../Config/base-import";
+
+.client-information-group {
+  .group-content {
+    .logo {
+      max-width: 400px;
+
+      img {
+        max-width: 100%;
+        width: auto;
+        height: auto;
+        margin-bottom: $vertical-element-spacing;
+      }
+    }
+  }
+}

@@ -1,0 +1,120 @@
+@import "../Config/base-import";
+#enclosing2 {
+  .public-client-logo .name {
+    width: auto;
+    display: block;
+  }
+
+  .genform {
+    .reserve-tickets {
+      .claimed-tickets {
+        margin-bottom: 7px;
+      }
+
+      .address-info {
+        color: $color-true-black;
+        font-family: $font-stack-light;
+        font-size: 21px;
+        margin: 0 0 30px;
+      }
+
+      > label {
+        font-family: $font-stack-italic;
+        font-size: 16px;
+
+        + label {
+          margin-top: 10px;
+        }
+      }
+
+      input,
+      select {
+        width: auto;
+      }
+    }
+  }
+
+  .main-content-con {
+    .to-reserve {
+      margin-top: 10px;
+
+      input {
+        width: 100px;
+        margin-top: 5px;
+        display: block;
+      }
+    }
+    .claimed-tickets {
+      font-family: $font-stack-bold;
+      font-size: 21px;
+      @include inlineBottom;
+      margin-bottom: -1px;
+    }
+
+    .total-cost {
+      border-bottom: 1px solid $color-lighter-gray;
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+
+      span {
+        font-family: $font-stack-bold;
+        font-size: 21px;
+        @include inlineBottom;
+        margin-bottom: -1px;
+      }
+    }
+    .address {
+      .chart-label {
+        margin-bottom: 5px;
+      }
+    }
+    @include breakpoint($bp-tablets-portrait) {
+      @include inlineTop;
+      width: 62%;
+    }
+    @include breakpoint($bp-tablets-landscape) {
+      .reserve-tickets-con {
+        max-width: 95%;
+      }
+      .address {
+        .address_form {
+          .city_container,
+          .region_container,
+          .postal_code_container {
+            @include inline;
+          }
+          .region_container,
+          .postal_code_container {
+            margin-left: 20px;
+          }
+        }
+      }
+    }
+  }
+
+  .sidebar {
+    margin-bottom: 30px;
+
+    .event-view {
+      > div {
+        > label {
+          font-size: 14px;
+        }
+      }
+    }
+
+    .group-info-view {
+      label {
+        font-size: 14px;
+      }
+    }
+
+    @include breakpoint($bp-tablets-portrait) {
+      @include inlineTop;
+      width: 35%;
+      margin-left: 20px;
+      border-left: 1px solid $color-lighter-gray;
+      padding-left: 20px;
+    }
+  }
+}

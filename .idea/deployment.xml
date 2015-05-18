@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" serverName="FanStreamm" traceLevel="DETAILS">
+    <serverData>
+      <paths name="FanStreamm">
+        <serverdata>
+          <mappings>
+            <mapping deploy="Web\Stylesheets" local="$PROJECT_DIR$/Stylesheets/Build" web="/" />
+            <mapping deploy="Web\Javascript" local="$PROJECT_DIR$/Javascript" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="Runza">
+        <serverdata>
+          <mappings>
+            <mapping deploy="www.runza.com\Web\Stylesheets\redesign2015" local="$PROJECT_DIR$/Stylesheets/Build" web="/" />
+            <mapping deploy="www.runza.com\Web\Javascript\redesign2015" local="$PROJECT_DIR$/Javascript" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="Vipa Solutions QA">
+        <serverdata>
+          <mappings>
+            <mapping deploy="Stylesheets" local="$PROJECT_DIR$/Stylesheets" web="/" />
+            <mapping deploy="Javascript" local="$PROJECT_DIR$/Javascript" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="knoone Sandbox">
+        <serverdata>
+          <mappings>
+            <mapping deploy="Stylesheets\redesign2015" local="$PROJECT_DIR$/Stylesheets" web="/" />
+            <mapping deploy="Javascript\redesign2015" local="$PROJECT_DIR$/Javascript" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
+</project>

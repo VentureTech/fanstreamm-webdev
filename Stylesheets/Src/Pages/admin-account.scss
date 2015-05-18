@@ -1,0 +1,44 @@
+@import "../Config/base-import";
+
+#body {
+  .updateprincipal {
+    button {
+      @extend %cta_btn;
+      display: block;
+      margin: $vertical-element-spacing 0;
+    }
+
+    .phone_number {
+      .format {
+        .nanp_button,
+        .intl_button {
+          @include inlineTop;
+          margin-bottom: $vertical-element-spacing;
+          margin-right: 5px;
+
+          input {
+            @include inlineTop;
+            width: auto;
+            margin-right: 5px;
+          }
+
+          label {
+            @include inlineTop;
+            width: auto;
+          }
+        }
+      }
+    }
+
+    .actions {
+      text-align: right;
+      button {
+        @include inlineTop;
+
+        + button {
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,51 @@
+@import "../Config/base-import";
+
+#enclosing2 {
+  .main-content-con {
+    padding-top: 10px;
+  }
+  .sidebar {
+    margin-top: 20px;
+    border-top: 1px solid #d4d4d4;
+    padding-top: 10px;
+
+    .title {
+      border: 0;
+      font-family: "LatoBlack", "LatoRegular", "Verdana", sans-serif;
+      color: #d60002;
+      font-size: 14px;
+      margin: 0 0 8px;
+      padding-bottom: 3px;
+      border-bottom: 1px solid $color-lighter-gray;
+      display: block !important;
+
+      p {
+        font-size: 30px;
+        margin: 0;
+        padding: 0;
+      }
+
+      .support-form table.phone_number_form td {
+        border: 0;
+        padding: 0;
+      }
+    }
+  }
+
+  @include breakpoint($bp-tablets-portrait) {
+    .main-content-con {
+      width: 60%;
+      display: inline-block;
+      box-sizing: border-box;
+      vertical-align: top;
+    }
+
+    .sidebar {
+      width: 35%;
+      padding: 10px 0 0 20px;
+      margin: 0 0 0 20px;
+      border-left: 1px solid #d4d4d4;
+      border-top: 0;
+    }
+  }
+}

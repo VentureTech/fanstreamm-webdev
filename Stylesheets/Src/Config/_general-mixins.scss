@@ -1,0 +1,191 @@
+@import "overall";
+@import "../../../bower_components/breakpoint-sass/stylesheets/breakpoint";
+
+@mixin centerDesktopContainer() {
+  margin: 0 auto;
+  width: 95%;
+  max-width: 1280px;
+
+  .ieonly & {
+    width: auto;
+  }
+
+  @include breakpoint($bp-desktop) {
+    width: 100%;
+  }
+}
+
+@mixin pdfIcon() {
+  content: '';
+  background: url("/_resources/dyn/files/1413909z2a8f004e/_fn/pdf-icon.png") left center no-repeat;
+  display: inline-block;
+  height: 17px;
+  width: 17px;
+  margin-left: 8px;
+  margin-bottom: -3px;
+}
+
+@mixin transparentFallback($color, $alpha) {
+  $rgba: rgba($color, $alpha);
+  $ie-hex-str: ie-hex-str($rgba);
+  background-color: transparent;
+  background-color: $rgba;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#{$ie-hex-str},endColorstr=#{$ie-hex-str});
+  zoom: 1;
+}
+
+@mixin gradientGenerator($color1, $color2) {
+  background: $color1; /* Old browsers */
+  background: -moz-linear-gradient(top,  $color1 0%, $color2 53%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$color1), color-stop(53%,$color2)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  $color1 0%,$color2 53%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  $color1 0%,$color2 53%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  $color1 0%,$color2 53%); /* IE10+ */
+  background: linear-gradient(to bottom,  $color1 0%,$color2 53%); /* W3C */
+
+
+  .lt-ie9 & {
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$color1}', endColorstr='#{$color2}', GradientType=0); /* IE6-8 */
+    background: none;
+  }
+}
+
+@mixin pie-clearfix() {
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin inline() {
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+  box-sizing: border-box;
+}
+
+@mixin inlineTop() {
+  @include inline;
+  vertical-align: top;
+}
+
+@mixin inlineMiddle() {
+  @include inline;
+  vertical-align: middle;
+}
+
+@mixin inlineBottom() {
+  @include inline;
+  vertical-align: bottom;
+}
+
+
+%cta_btn {
+  color: $color-true-white;
+  background-color: $color-navy-blue;
+  text-decoration: none;
+  font-family: $font-stack-sans;
+  padding: 10px 15px;
+  outline: 0;
+  @extend %black-text-shadow;
+  box-sizing: border-box;
+  cursor: pointer;
+  font-size: 16px;
+  border: 0;
+  border-radius: 7px;
+  box-shadow: 1px 1px 2px rgba(0,0,0,.3);
+  @include inline;
+  margin-top: 5px;
+  margin-bottom: 5px;
+
+  &:hover {
+    background-color: $color-darker-gray;
+  }
+
+  @include breakpoint($bp-tablets-portrait) {
+    @include inlineMiddle;
+    width: auto;
+  }
+}
+
+%titleclass {
+  font-family: $font-stack-black;
+  color: $color-fanstreamm-red;
+  font-size: 14px;
+  margin: 20px 0 8px;
+  padding-bottom: 3px;
+  border-bottom: 1px solid $color-lighter-gray;
+  display: block !important;
+}
+
+%labelclass {
+  font-family: $font-stack-black;
+  color: $color-fanstreamm-red;
+  font-size: 16px;
+  margin: 0 0 4px 0;
+  display: block;
+
+  @include breakpoint($bp-mobile-landscape) {
+    margin: 0 10px 0 0;
+    @include inlineBottom;
+  }
+}
+
+%sectionlabelclass {
+  font-family: $font-stack-black;
+  font-size: 20px;
+  border-bottom: 1px solid $color-lighter-gray;
+  margin: 0 0 10px 0;
+  padding-bottom: 2px;
+  display: block;
+}
+
+%blockheader {
+  color: $color-true-white;
+  background-color: $color-fanstreamm-red;
+  font-family: $font-stack-bold;
+  font-size: 28px;
+  padding: 20px;
+  text-align: center;
+  display: block;
+  margin-bottom: 30px;
+
+  p {
+    margin: 0;
+    font-size: 28px;
+    color: $color-true-white;
+    font-family: $font-stack-bold;
+  }
+}
+
+%pageheading {
+  color: $color-true-black;
+  font-family: $font-stack-black;
+  font-size: 36px;
+  line-height: 1.15;
+  margin: 0 0 20px;
+
+  @include breakpoint($bp-tablets-portrait) {
+    font-size: 42px;
+  }
+}
+
+%pageheading-md {
+  color: $color-true-black;
+  font-family: $font-stack-black;
+  font-size: 24px;
+  line-height: 1.3em;
+}
+
+%pageheading-sm {
+  color: $color-true-black;
+  font-family: $font-stack-light;
+  font-size: 21px;
+  margin: 0 0 30px;
+
+}
+
+%black-text-shadow {
+  text-shadow: 0 2px 1px rgba($color-true-black, .3);
+}

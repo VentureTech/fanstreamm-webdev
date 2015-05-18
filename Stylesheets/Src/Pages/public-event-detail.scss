@@ -1,0 +1,185 @@
+@import "../Config/base-import";
+
+#enclosing2 {
+  .step-nav.menu {
+    ul {
+      .mi {
+        .menuitemlabel {
+          &.create-group {
+            &:before {
+              background: url("/_resources/dyn/files/32550zecf40517/_fn/cal-sprite-sm.png") top center no-repeat;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.main-content-con {
+  .need-account,
+  .invite-people {
+    font-family: $font-stack-sans;
+    text-align: center;
+  }
+
+  .event-view {
+    .data {
+      background: $color-grayish-white;
+      padding: 10px 5px;
+
+      label {
+        display: block;
+      }
+    }
+
+    .name {
+      padding: 10px 5px;
+      margin-top: 0;
+
+      label {
+        display: block;
+        margin-bottom: 3px;
+      }
+    }
+
+    .location {
+      margin-top: 0;
+      background: $color-grayish-white;
+      padding: 10px 5px;
+
+      label {
+        display: block;
+        margin-bottom: 3px;
+        vertical-align: top;
+      }
+
+      .line-one {
+        display: block;
+        margin-bottom: 3px;
+      }
+
+      .state,
+      .postalcode {
+        margin-left: 5px;
+      }
+    }
+
+    .desc {
+      margin-top: 0;
+      padding: 10px 5px;
+
+      label {
+        @extend %labelclass;
+        display: block;
+        margin-bottom: 3px;
+        vertical-align: top !important;
+      }
+
+      .val {
+        margin-bottom: $vertical-element-spacing;
+      }
+    }
+
+    @include breakpoint($bp-tablets-portrait) {
+      .data,
+      .name,
+      .location,
+      .desc {
+        label {
+          display: inline-block;
+          width: 100px;
+          margin-bottom: 0;
+          text-align: right;
+        }
+      }
+
+      .desc {
+        .val {
+          display: inline-block;
+          max-width: 70%;
+        }
+      }
+    }
+  }
+
+  @include breakpoint($bp-tablets-portrait) {
+    @include inlineTop;
+    width: 70%;
+  }
+}
+
+.genform {
+  .reserve-actions,
+  .actions {
+    text-align: center;
+
+    button.btn {
+      padding: 12px 20px;
+      margin: 10px auto;
+      font-size: 18px;
+      float: none;
+    }
+  }
+
+}
+
+.sidebar {
+  margin-bottom: 30px;
+
+  .directions {
+    text-align: center;
+    font-family: $font-stack-italic;
+  }
+
+  .genform .public-event-view {
+    border-bottom: 0;
+  }
+
+  .seating-chart {
+    width: 100%;
+
+    .img-con {
+      text-align: center;
+    }
+
+    .trigger {
+      display: none;
+    }
+
+    .miwt-collapsable-content {
+      position: relative !important;
+      visibility: visible !important;
+      max-height: none;
+      overflow: visible;
+
+      img {
+        max-width: 100%;
+        height: auto;
+        width: auto;
+      }
+    }
+  }
+
+  @include breakpoint($bp-tablets-portrait) {
+    @include inlineTop;
+    padding-left: 30px;
+    width: 40%;
+  }
+}
+
+.seating-type-view {
+  a.trigger {
+    display: none;
+  }
+
+  .miwt-collapsable-content {
+    display: block !important;
+
+    img {
+      max-width: 100%;
+      height: auto;
+      width: auto;
+    }
+  }
+}

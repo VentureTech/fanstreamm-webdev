@@ -1,0 +1,174 @@
+@import "../Config/base-import";
+
+
+#header {
+
+  .menu-comp {
+    max-height: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    top: 55px;
+    transition: .5s ease all;
+    @include inlineTop;
+    font-size: $body-font-size;
+
+    &.menu_open {
+      max-height: 2000px;
+    }
+
+    ul.menu {
+      display: block;
+      @include inline;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      width: 350px;
+      border: 1px solid $color-lighter-gray;
+      border-bottom: 0;
+
+      .mi {
+        display: block;
+
+        + .mi {
+          border-top: 1px solid $color-lighter-gray;
+        }
+
+        .menuitemlabel {
+          display: block;
+          text-decoration: none;
+          font-family: $font-stack-black;
+          padding: 12px 8px;
+          background: $color-grayish-white;
+          color: $color-navy-blue;
+          letter-spacing: 1px;
+          text-transform: uppercase;
+
+          &:hover {
+            background: $color-true-black;
+            color: $color-true-white;
+            @extend %black-text-shadow;
+          }
+        }
+      }
+
+      .mi-active {
+        .menuitemlabel {
+          @include gradientGenerator($color-grayish-white, $color-lighter-gray);
+          color: $color-darker-red;
+
+          &:hover {
+            background: $color-true-black;
+            color: $color-true-white;
+          }
+        }
+      }
+    }
+  }
+
+  @include breakpoint($bp-tablets-portrait) {
+    .menu-comp {
+      width: 100%;
+      max-height: 2000px;
+      padding: 25px 250px 0 150px;
+      top: 0;
+      position: static;
+      text-align: right;
+
+      ul.menu {
+        border: 0;
+        width: auto;
+
+        .mi {
+          @include inline;
+
+          + .mi {
+            margin-left: 5px;
+            border: 0;
+          }
+
+          .menuitemlabel {
+            border: 1px solid $color-lighter-gray;
+            padding: 5px 10px;
+          }
+        }
+      }
+
+      .logout {
+        position: absolute;
+        right: 0;
+        top: 10px;
+        background: transparent;
+        padding-top: 7px;
+
+        .username {
+          @include inlineMiddle;
+          color: $color-true-white;
+          text-transform: uppercase;
+          text-shadow: none;
+          letter-spacing: 1px;
+          max-width: 145px;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+        }
+
+        .logout-url {
+          margin-left: 5px;
+          @include inline;
+
+          a {
+            width: auto;
+          }
+        }
+      }
+    }
+
+    #mobile-nav-toggle {
+      display: none;
+    }
+  }
+  @include breakpoint($bp-tablets-landscape) {
+    .menu-comp {
+      padding-top: 10px;
+
+      ul.menu {
+        .mi {
+          + .mi {
+            margin-left: 10px;
+          }
+          .menuitemlabel {
+            padding: 10px;
+          }
+        }
+      }
+
+
+      .logout {
+        padding-top: 0;
+
+        .username {
+          font-size: 14px;
+        }
+
+        .logout-url {
+          margin-left: 5px;
+        }
+      }
+
+    }
+  }
+
+
+}
+.top-part {
+  > .actions {
+    font-family: $font-stack-black;
+
+    button.btn {
+      display: block;
+      margin: 3px 0;
+    }
+  }
+}

@@ -1,0 +1,227 @@
+@import "../Config/base-import";
+
+#enclosing2 {
+  .step-nav.menu {
+    ul {
+      .mi {
+        .menuitemlabel {
+          &.pick-date {
+            &:before {
+              background: url("/_resources/dyn/files/32550zecf40517/_fn/cal-sprite-sm.png") top left no-repeat;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.event-listing {
+  .message {
+    @extend %pageheading-md;
+    text-align: center;
+
+    @include breakpoint($bp-tablets-portrait) {
+      text-align: left;
+    }
+  }
+}
+.event-search {
+  margin: $vertical-element-spacing 0;
+
+  .results {
+    background-color: $color-light-white;
+
+    + .results {
+      margin-top: 40px;
+    }
+
+    .month.header {
+      font-family: $font-stack-black;
+      font-size: 24px;
+      border-bottom: 1px solid $color-lighter-gray;
+      padding-bottom: 2px;
+      display: block;
+      color: #00739B;
+      background: $color-true-white;
+    }
+  }
+
+  @include breakpoint($bp-tablets-portrait) {
+    .results {
+      margin: 0 10px 40px;
+      @include inlineTop;
+      width: 47%;
+
+      + .results {
+        margin-top: 0;
+      }
+    }
+  }
+  @include breakpoint($bp-tablets-landscape) {
+    .results {
+      width: 47.75%;
+    }
+  }
+  @include breakpoint($bp-desktop) {
+    .results {
+      width: 48%;
+    }
+  }
+}
+
+.event-name {
+  min-height: 45px;
+  padding: 5px 10px 0;
+  box-sizing: border-box;
+  line-height: 1.4;
+  position: relative;
+  transition: .2s ease all;
+
+  &:hover {
+    box-shadow: 0 0 4px rgba($color-true-black, .25);
+    z-index: 9999;
+    background: $color-true-white;
+
+    + div {
+      border-top: 1px solid transparent;
+    }
+  }
+
+  + .event-name {
+    border-top: 1px solid $color-lighter-gray;
+  }
+
+  .name {
+    a {
+      font-family: $font-stack-black;
+      color: $color-true-black;
+      font-size: 14px;
+    }
+  }
+
+  .name-text {
+    font-family: $font-stack-black;
+    font-size: 14px;
+  }
+
+  div.date {
+    font-family: $font-stack-sans;
+    font-size: 14px;
+  }
+
+  .new-date {
+    display: block;
+    padding: 0 0 5px;
+    width: 100%;
+    box-sizing: border-box;
+    color: $color-true-black;
+
+    .wrap {
+      @include inline;
+      width: 110px;
+    }
+
+    .day {
+      @include inline;
+      font-size: 30px;
+      font-family: $font-stack-bold;
+      line-height: .8;
+      margin-bottom: 3px;
+    }
+
+    .month {
+      @include inline;
+      text-transform: uppercase;
+      font-family: $font-stack-bold;
+      font-size: 24px;
+      margin-right: 3px;
+      color: #00739B;
+    }
+
+    .week {
+      @include inline;
+      font-family: $font-stack-light;
+      font-size: 16px;
+      letter-spacing: -1px;
+      margin-bottom: 3px;
+    }
+  }
+
+  .wrap-info {
+    padding-bottom: 10px;
+
+    span.date {
+      display: none;
+    }
+  }
+
+  @include breakpoint($bp-tablets-portrait) {
+    display: block;
+    box-sizing: border-box;
+
+    .name-text {
+      box-sizing: border-box;
+      margin-right: 5px;
+      margin-bottom: 2px;
+    }
+
+    div.date {
+      box-sizing: border-box;
+    }
+
+    .new-date {
+      @include inlineBottom;
+      padding: 10px;
+      width: 40%;
+      color: $color-true-black;
+
+      .wrap {
+        @include inlineBottom;
+      }
+
+      .day {
+        @include inline;
+        margin-bottom: 0;
+      }
+
+      .month {
+        @include inline;
+        margin-right: 3px;
+      }
+
+      .week {
+        @include inline;
+        margin-bottom: 0;
+      }
+    }
+
+    .wrap-info {
+      @include inlineBottom;
+      width: 57%;
+    }
+  }
+
+  @include breakpoint($bp-tablets-landscape) {
+    display: block;
+
+    .new-date {
+      width: 25%;
+    }
+
+    .wrap-info {
+      width: 72%;
+    }
+  }
+
+  @include breakpoint($bp-desktop) {
+    .new-date {
+      width: 20%;
+    }
+
+    .wrap-info {
+      width: 77%;
+    }
+  }
+}
+

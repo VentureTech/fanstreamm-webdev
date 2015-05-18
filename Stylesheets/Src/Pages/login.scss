@@ -1,0 +1,207 @@
+@import "../Config/base-import";
+
+#header {
+  @include breakpoint($bp-tablets-portrait) {
+    .menu-comp {
+      padding-right: 0;
+    }
+  }
+}
+
+#body-wc-0 {
+  font-family: $font-stack-sans;
+}
+
+a {
+  color: $color-darker-gray;
+  font-family: $font-stack-sans;
+}
+
+#body {
+  .box-wc {
+    .message-container {
+      margin: $vertical-element-spacing 0;
+      padding: 10px;
+      background-color: $color-fanstreamm-red;
+      color: $color-true-white;
+      margin-right: 20px;
+
+
+      &.empty {
+        display: none;
+      }
+
+      .error {
+        color: $color-true-white;
+        font-family: $font-stack-bold;
+
+        +.error {
+          margin-top: 10px;
+        }
+      }
+    }
+
+    .title {
+      @extend %titleclass;
+      border: 0;
+
+      p {
+        margin: 0;
+        padding: 0;
+        font-size: 30px;
+      }
+    }
+
+    .login-con {
+      margin: 10px auto;
+
+      .login.password-entry {
+        text-align: left;
+        font-size: 14px;
+        font-family: $font-stack-sans;
+
+        label {
+          display: block;
+        }
+
+        .field {
+          margin-top: $vertical-element-spacing;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+          padding: 10px;
+          width: 200px;
+          border: 1px solid $color-lighter-gray;
+        }
+
+        .actions {
+          margin-top: $vertical-element-spacing;
+          text-align: left;
+
+          input[type="submit"] {
+            @extend %cta_btn;
+            width: auto;
+          }
+        }
+      }
+
+
+      @include breakpoint($bp-tablets-portrait) {
+        margin: 0;
+        @include inlineTop;
+        width: 50%;
+        padding-left: 20px;
+      }
+
+      @include breakpoint($bp-desktop) {
+        margin: 0;
+
+        .fields,
+        .actions {
+          @include inline;
+        }
+
+        .fields {
+          .text {
+            @include inline;
+
+            + .text {
+              margin-left: 30px;
+            }
+          }
+        }
+
+        .actions {
+          margin-left: 20px;
+        }
+      }
+
+    }
+
+    .login-info-con {
+
+      #signup {
+        text-align: left;
+
+        .title {
+          margin-bottom: 0;
+
+          p {
+            font-size: 18px;
+            margin-bottom: 0;
+          }
+        }
+
+        .signup {
+          p {
+            margin: 5px 0;
+
+            a {
+              @extend %cta_btn;
+              display: inline-block;
+              width: auto;
+            }
+          }
+        }
+      }
+
+      .extra-info {
+        display: none;
+      }
+      .page-title {
+        margin-top: 10px;
+        border-top: 1px solid $color-lighter-gray;
+        margin-bottom: 15px;
+        padding-top: 20px;
+
+        p {
+          font-size: 24px;
+          margin-bottom: 7px;
+        }
+      }
+
+      .more-info {
+        p, ul {
+          font-size: 14px;
+          line-height: 1.5;
+        }
+      }
+
+      @include breakpoint($bp-tablets-portrait) {
+        @include inlineTop;
+        border-left: 1px solid $color-light-white;
+        position: relative;
+        padding: 0 20px 0 40px;
+        width: 50%;
+
+        #signup {
+          .title {
+            display: inline-block !important;
+            margin-right: 20px;
+
+            p {
+              font-size: 30px;
+            }
+          }
+
+          .signup {
+            @include inlineTop;
+            margin-top: 10px;
+          }
+        }
+
+        .extra-info {
+          display: block;
+        }
+      }
+      @include breakpoint($bp-tablets-landscape) {
+        width: 50%;
+      }
+    }
+
+
+
+
+  }
+}

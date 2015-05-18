@@ -1,0 +1,60 @@
+@import "../Config/base-import";
+
+.entity-actions {
+  margin-right: 10px;
+  margin-top: 20px;
+}
+
+.entity-actions,
+.search-bar {
+  @include inlineTop;
+
+  .actions {
+    display: block;
+    margin: 10px 10px 0 0;
+
+    button.btn {
+      float: none;
+      margin: 0 5px 0 0;
+
+      + button.btn {
+        margin: 0;
+      }
+    }
+  }
+
+  @include breakpoint($bp-tablets-portrait) {
+    .actions {
+      @include inlineBottom;
+      text-align: right;
+      margin: 0;
+
+      button.btn {
+        margin: 0;
+
+        + button.btn {
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+}
+
+.pages.controls {
+  > a,
+  > span {
+    + span,
+    + a {
+      margin-left: 5px;
+    }
+  }
+}
+
+.mp-controls.controls {
+  margin: 0 5px;
+  a + a {
+    margin-left: 5px;
+  }
+}
+
+

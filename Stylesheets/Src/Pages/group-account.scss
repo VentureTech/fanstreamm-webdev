@@ -1,0 +1,10 @@
+@import "../Config/base-import";
+
+.account-editor.property-wrapper {
+  margin: 0 auto;
+  max-width: 100%;
+
+  @include breakpoint($bp-tablets-portrait) {
+    max-width: 400px;
+  }
+}

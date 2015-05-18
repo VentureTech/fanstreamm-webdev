@@ -1,0 +1,49 @@
+$color-fanstreamm-red: #d60002;
+$color-darker-red: #c10002;
+$color-accepted-green: #30a42d;
+$color-darker-green: #1e952a;
+$color-noresponse-orange: #d26b06;
+$color-darker-orange: #8d4606;
+$color-blue: #1e6dd2;
+$color-darker-blue: #1c509f;
+$color-teal-blue: #00739B;
+
+$color-navy-blue: #042642;
+$color-light-white: #f0f0f0;
+$color-true-white: #ffffff;
+$color-grayish-white: #f4f4f4;
+$color-gray: #939393;
+$color-darker-gray: #747474;
+$color-lighter-gray: #d4d4d4;
+$color-true-black: #000000;
+
+
+/** setup font stacks **/
+$font-stack-sans:  "LatoRegular", "Verdana", sans-serif;
+$font-stack-serif: "Times New Roman", "Georgia", sans-serif;
+
+$font-stack-black: "LatoBlack", $font-stack-sans;
+$font-stack-bold: "LatoBold", $font-stack-sans;
+$font-stack-light: "LatoLight", $font-stack-sans;
+$font-stack-italic: "LatoItalic", $font-stack-sans;
+$font-stack-bolditalic: "LatoBold-Italic", $font-stack-sans;
+
+$body-font-size: 14px;
+
+$html-entity-nbsp: "\a0";
+$html-entity-raquo: "\BB";
+
+$vertical-element-spacing: 20px;
+
+$constraint-max-width: 1280px;
+
+$bp-mobile-portrait: (min-width 414px);
+$bp-mobile-landscape: (min-width 480px);
+$bp-mobile-landscape-wide: (min-width 667px);
+$bp-tablets-portrait: (min-width 768px);
+$bp-tablets-landscape: (min-width 1024px);
+$bp-desktop: (min-width 1280px);
+$bp-desktop-wide: (min-width 1400px);
+
+$bp-marquee-cta-tablet: (min-width 885px);
+$bp-marquee-cta-desktop: (min-width 1130px);

@@ -1,0 +1,785 @@
+@import "../Config/base-import";
+
+.genform {
+  font-family: $font-stack-sans;
+  font-size: $body-font-size;
+
+  .message-container {
+    margin: $vertical-element-spacing 0;
+    padding: 10px;
+    background-color: $color-fanstreamm-red;
+    color: $color-true-white;
+
+    &.empty {
+      display: none;
+    }
+
+    .error {
+      color: $color-true-white;
+      font-family: $font-stack-bold;
+
+      +.error {
+        margin-top: 10px;
+      }
+    }
+  }
+
+  div {
+    box-sizing: border-box;
+  }
+
+  .group-title,
+  .ticket-label,
+  .chart-label,
+  .event-label,
+  .event-view > div > label,
+  .group-info-view label,
+  .my-groups label,
+  .claimed-tickets label,
+  .to-reserve label,
+  .total-cost label,
+  .account-info label,
+  .group-owner-view-con label,
+  .invitation-submit label,
+  &.updateprincipal label,
+  &.updateprincipal > form > div span,
+  .timeZone label,
+  &.retrieve-password span.email {
+    @extend %labelclass;
+  }
+
+  .timeZone {
+    margin: $vertical-element-spacing 0;
+  }
+
+  .account-info {
+    label {
+      display: block;
+    }
+
+    .phone {
+      table,
+      table td {
+        border: 0;
+        padding: 0 5px 0 0;
+      }
+      table {
+        @include inlineBottom;
+        width: auto;
+      }
+    }
+
+    @include breakpoint($bp-tablets-portrait) {
+      label {
+        @include inlineTop;
+      }
+    }
+  }
+
+  .val {
+    @include inlineBottom;
+  }
+
+  .my-groups {
+    margin-bottom: $vertical-element-spacing;
+  }
+
+  .group-content,
+  .address_form,
+  .address_lines,
+  .event-editor,
+  .event-view,
+  .group-info-view,
+  .ticket-officer-info,
+  .organize-group-con,
+  .reserve-tickets-con,
+  .account-info > div,
+  &.updateprincipal > form,
+  &.support-form .form_content > div > div,
+  .reserve-tickets,
+  .group-owner-view-con,
+  .invitation-submit,
+  .props {
+    > div + div {
+        margin-top: $vertical-element-spacing;
+    }
+  }
+
+  &.support-form {
+    .submit_button button {
+      @extend %cta_btn;
+    }
+  }
+
+  .group-info-view {
+    .group-status {
+      padding-right: 120px;
+    }
+  }
+
+  .event-view {
+    .ticket-infos-view {
+      padding: 10px 0 0;
+      margin-top: 0;
+
+      > label {
+        color: #000;
+        @extend %sectionlabelclass;
+      }
+
+      .infos {
+        text-align: center;
+      }
+
+      .ticket-info {
+        text-align: center;
+        margin-bottom: 20px;
+
+        label {
+          font-family: $font-stack-sans;
+        }
+
+        > div {
+          font-size: 21px;
+          word-wrap: break-word;
+          font-family: $font-stack-black;
+        }
+      }
+
+      @include breakpoint($bp-mobile-landscape) {
+        .ticket-info {
+          @include inlineTop;
+          margin-top: 5px;
+          width: 50%;
+          padding: 0 20px;
+        }
+      }
+      @include breakpoint($bp-tablets-landscape) {
+        .ticket-info {
+          width: auto;
+        }
+      }
+    }
+  }
+
+  .hidden > .miwt-collapsable-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: .5s ease all;
+    position: relative !important;
+    visibility: visible !important;
+  }
+
+  .shown > .miwt-collapsable-content {
+    max-height: 2000px;
+  }
+
+  .public-group-owner {
+    margin-bottom: $vertical-element-spacing;
+  }
+
+  .public-event-view {
+    margin-bottom: 15px;
+    padding-bottom: 20px;
+
+    .location {
+      label {
+        vertical-align: top;
+      }
+
+      .val {
+        .line-one,
+        .line-two {
+          display: block;
+          margin-bottom: 3px;
+        }
+
+        .state,
+        .postalcode {
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+
+  .group-info-view {
+    position: relative;
+
+    > div > div > div {
+      + div {
+        margin-top: 20px;
+      }
+    }
+
+    .actions.edit {
+      @include pie-clearfix;
+      position: absolute;
+      top: -12px;
+      right: 0;
+      margin-top: 0;
+    }
+
+    .actions {
+      @include pie-clearfix;
+
+      a {
+        display: inline-block;
+        zoom: 1;
+        *display: inline;
+        @extend %cta_btn;
+        margin-bottom: $vertical-element-spacing;
+        padding: 6px;
+
+        + a {
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+
+  .ticket-officer-info,
+  .organize-group-con,
+  .invitees-editor > .invite-prompt,
+  .invitees-editor > .email-title {
+    label {
+      font-family: $font-stack-black;
+      color: $color-fanstreamm-red;
+    }
+  }
+
+  .invitee-list {
+    .label {
+      label,
+      .val {
+        @include inlineMiddle;
+        padding-left: 10px;
+        font-family: $font-stack-black;
+      }
+    }
+  }
+
+  .invitees-editor {
+    .email-title,
+    .actions {
+      margin-top: $vertical-element-spacing;
+      padding-right: 5px;
+
+      &:after {
+        display: block;
+        content: '';
+        clear: both;
+      }
+    }
+  }
+
+  .chart-con {
+    margin-top: 10px;
+    max-height: 49px;
+    overflow: hidden;
+    transition: .4s ease max-height;
+
+    .chart-label,
+     a.trigger {
+      @extend %titleclass;
+      display: block;
+      position: relative;
+      height: 20px;
+      text-decoration: none;
+
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 15px;
+        background: url("/_resources/dyn/files/21155zb442df1a/_fn/plus.png") no-repeat right top;
+        height: 15px;
+        width: 15px;
+        background-size: contain;
+        cursor: pointer;
+      }
+    }
+
+    .chart-picture {
+      max-width: 250px;
+
+      img {
+        max-width: 100%;
+        height: auto;
+        width: auto;
+      }
+    }
+
+    &.open,
+    &.shown {
+      max-height: 2000px;
+
+      .miwt-collapsable-content {
+        position: relative !important;
+        visibility: inherit !important;
+      }
+
+     .chart-label:after,
+      a.trigger:after {
+        background: url("/_resources/dyn/files/21154zc345ef8c/_fn/minus.png") no-repeat right 2px;
+      }
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      width: auto;
+    }
+
+    @include breakpoint($bp-tablets-portrait) {
+      max-height: none;
+      overflow: auto;
+
+      .chart-label:after {
+        display: none;
+      }
+    }
+  }
+
+  .ticket-con {
+    margin-top: $vertical-element-spacing;
+  }
+
+  .title-con,
+  .ticket-info-editor {
+    > div {
+      display: inline-block;
+      zoom: 1;
+      *display: inline;
+      width: 20%;
+      padding: 5px;
+    }
+  }
+
+  .title-con {
+    font-family: $font-stack-black;
+    font-size: 14px;
+  }
+
+  .ticket-editor .actions {
+    text-align: center;
+  }
+
+  .add-new-info {padding: 5px;}
+
+  .selected-officer {
+    > label {
+      display: inline-block;
+      zoom: 1;
+      *display: inline;
+      width: 150px;
+      padding: 5px 0;
+    }
+
+    a {
+      display: inline-block;
+      zoom: 1;
+      *display: inline;
+      margin: 0 10px;
+      padding: 5px 0;
+    }
+
+    div + a {
+      margin-left: 0;
+    }
+  }
+
+  .client-status-group {
+    > div {
+      display: inline-block;
+      zoom: 1;
+      *display: inline;
+      padding: 5px 0;
+
+      &.status-label {
+        width: 150px;
+      }
+    }
+  }
+
+  .back.actions {
+    margin: 10px 0;
+  }
+
+  &.invites {
+    .group-view {
+      .label label {
+        @extend %labelclass;
+        @include inlineTop;
+      }
+    }
+
+
+    select,
+    button.btn {
+      box-sizing: border-box;
+      width: auto;
+    }
+
+    select {
+      @include inline;
+      width: auto;
+    }
+  }
+
+  .actions.top {
+    margin-bottom: $vertical-element-spacing;
+    margin-top: 5px;
+    @include pie-clearfix;
+    margin-right: 5px;
+
+    &:after {
+      clear: both;
+      content: '';
+      display: block;
+    }
+
+    @include breakpoint($bp-tablets-portrait) {
+      button.btn + button.btn {
+      }
+    }
+
+  }
+
+  .actions.bottom {
+    @include pie-clearfix;
+    margin-top: 20px;
+    text-align: right;
+
+    &:after {
+      clear: both;
+      content: '';
+      display: block;
+    }
+
+    button {
+      @include inline;
+      margin-bottom: 10px;
+      padding: 10px;
+    }
+
+    @include breakpoint($bp-tablets-portrait) {
+      text-align: right;
+
+      button {
+        width: auto;
+
+        + button {
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+
+  .reserve-actions,
+  .actions-invite,
+  .actions-reserve,
+  .select-actions,
+  .reservation-summary{
+    @include pie-clearfix;
+    button {
+      @extend %cta_btn;
+    }
+  }
+
+  .actions-invite,
+  .actions-reserve {
+    @include pie-clearfix;
+    background: $color-light-white;
+    padding: 20px;
+    color: $color-fanstreamm-red;
+    font-family: $font-stack-black;
+    text-align: center;
+
+    button {
+      display: block;
+      margin: $vertical-element-spacing auto 0;
+      width: 100%;
+      padding: 14px;
+    }
+
+    @include breakpoint($bp-tablets-portrait) {
+      @include inlineMiddle;
+      width: 45.5%;
+      padding: 20px 10px;
+
+      button {
+        padding: 10px;
+        width: 95%;
+      }
+    }
+
+    @include breakpoint($bp-desktop) {
+      button {
+        width: 50%;
+      }
+    }
+  }
+
+  .or-msg {
+    font-family: $font-stack-bolditalic;
+    font-size: 24px;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 10px 0;
+
+    @include breakpoint($bp-tablets-portrait) {
+      @include inlineMiddle();
+      width: 8%;
+      font-size: 22px;
+    }
+  }
+
+  .actions-reserve {
+    @include breakpoint($bp-tablets-portrait) {
+      margin-top: 0;
+    }
+  }
+
+  .reserve-tickets {
+    .buttons.request {
+      @include pie-clearfix;
+
+      button.btn {
+        @extend %cta_btn;
+
+        + button.btn {
+          margin-left: 5px;
+        }
+      }
+
+      @include breakpoint($bp-tablets-portrait) {
+        text-align: right;
+      }
+    }
+
+  }
+
+  &.group-selector {
+    margin-top: 20px;
+
+    + .genform {
+      display: none;
+
+      &.invites {
+        display: block;
+      }
+    }
+
+    .my-groups {
+      .title,
+      .select-groups {
+        @include inlineMiddle;
+      }
+
+      label {
+        margin-bottom: 5px;
+        margin-right: 5px;
+      }
+    }
+    margin-bottom: 10px;
+  }
+
+  .invitees {
+    margin: $vertical-element-spacing 0;
+    background: $color-grayish-white;
+    border-top: 1px solid $color-lighter-gray;
+
+    > div {
+      width: 100%;
+
+      > div {
+        border: 1px solid $color-true-white;
+        border-bottom: 0;
+        font-size: 14px;
+
+        &.header {
+          background-color: $color-darker-gray;
+          color: $color-true-white;
+
+          .tickets,
+          .status {
+            font-family: $font-stack-sans;
+            font-size: 14px;
+          }
+
+          label {
+            margin: 0;
+          }
+        }
+
+        &.NoResponse {
+          .status {
+            color: $color-fanstreamm-red;
+          }
+        }
+        &.Attending {
+          .status {
+            color: $color-accepted-green;
+          }
+        }
+        &.Declined {
+          .status {
+            color: #bbb;
+          }
+        }
+        > div {
+          padding: 5px;
+          @include inlineMiddle;
+
+          + div {
+            margin-top: 1px solid $color-lighter-gray
+          }
+        }
+      }
+
+      .check {
+        width: 5%;
+      }
+
+      .tickets {
+        width: 26%;
+        font-family: $font-stack-bold;
+        font-size: 16px;
+
+        > div {
+          @include inlineMiddle;
+          line-height: 26px;
+        }
+
+        .actions {
+          margin-left: 7px;
+
+          a {
+            font-size: 10px;
+            margin-left: 3px;
+          }
+        }
+
+        .number-tickets {
+          input {
+            max-width: 30px;
+            font-family: $font-stack-sans;
+            font-size: 12px;
+          }
+          &:after {
+            display: inline-block;
+            zoom: 1;
+            *display: inline;
+            vertical-align: middle;
+            margin-left: 4px;
+            margin-top: -3px;
+            content: '';
+            background: url("/_resources/dyn/files/31827z27bc3ace/_fn/tickets2.png") no-repeat;
+            background-size: contain;
+            height: 16px;
+            width: 16px;
+          }
+        }
+      }
+
+      .name-or-email {
+        width: 50%;
+        word-break: break-all;
+      }
+
+      .status {
+        width: 19%;
+        font-family: $font-stack-bold;
+      }
+
+    }
+
+    @include breakpoint($bp-tablets-landscape) {
+      > div > div {
+        font-size: 14px;
+      }
+    }
+  }
+
+  label,
+  .label {
+    display: block;
+    margin-bottom: 3px;
+  }
+
+  input,
+  textarea {
+    padding: 5px;
+    max-width: 95%;
+    box-sizing: border-box;
+    border: 1px solid $color-lighter-gray;
+    outline: 0;
+
+    &[type="file"] {
+      border: 0;
+    }
+
+    @include breakpoint($bp-tablets-portrait) {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+
+  select {
+    max-width: 95%;
+
+    @include breakpoint($bp-tablets-portrait) {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+}
+
+.window.dialog {
+  table td {
+    border: 0;
+  }
+
+  .windowbuttons,
+  .buttons.confirm {
+    button {
+      @extend %cta_btn;
+    }
+  }
+
+  tr.titlebar_row {
+    td.windowbuttons {
+      button {
+        padding: 8px 10px;
+        font-size: 14px;
+      }
+    }
+
+  }
+
+  .windowcontent {
+    padding: 2em 2em 1em;
+    top: 3.65em;
+    border: 1px solid $color-lighter-gray;
+
+    .actions {
+      @include pie-clearfix;
+      margin-top: 10px;
+    }
+
+    .buttons.confirm {
+      text-align: right;
+      margin-top: 15px;
+
+      button {
+        padding: 8px 10px;
+        font-size: 14px;
+
+        + button {
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,51 @@
+@import "../Config/base-import";
+
+#body {
+  form {
+    .actions.top {
+      button.btn {
+        background-color: $color-darker-green;
+
+        &:first-child {
+          background-color: $color-navy-blue;
+        }
+
+        &:hover {
+          background: $color-gray;
+        }
+      }
+    }
+  }
+
+
+  .genform {
+    .actions-invite {
+      button.btn {
+        background-color: $color-navy-blue;
+
+        &:hover {
+          background: $color-gray;
+        }
+      }
+    }
+    .actions-reserve {
+      button.btn {
+        background-color: $color-darker-green;
+
+        &:hover {
+          background: $color-gray;
+        }
+      }
+    }
+  }
+
+  .actions.bottom {
+    button.btn {
+      background-color: $color-darker-red;
+
+      &:hover {
+        background-color: $color-darker-gray;
+      }
+    }
+  }
+}

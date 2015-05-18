@@ -1,0 +1,78 @@
+@import "../Config/base-import";
+
+#enclosing2 {
+  .main-content-con {
+
+    .public-event-view,
+    .group-info-view {
+      label {
+        width: 150px;
+        text-align: right;
+        font-size: 14px;
+        color: $color-true-black;
+        padding-right: 10px;
+        vertical-align: middle;
+      }
+    }
+
+    .public-event-view .event-view > div,
+    .group-info-view > div > div > div {
+      margin-top: 0;
+      padding: 0 0 10px;
+
+      + div {
+        border-top: 2px dotted #666;
+        padding: 10px 0;
+      }
+    }
+
+    @include breakpoint($bp-mobile-landscape-wide) {
+      @include inlineTop;
+      width: 70%;
+    }
+  }
+
+  .sidebar {
+    margin-bottom: 30px;
+    margin-top: 20px;
+
+    @include breakpoint($bp-mobile-landscape-wide) {
+      @include inlineTop;
+      width: 30%;
+      padding-left: 20px;
+      margin-top: 0;
+    }
+  }
+
+  #body {
+    .reserve-tickets-group {
+      margin-bottom: 10px;
+    }
+
+    .reservation-summary {
+      .tip1 {
+        margin: 0 0 10px;
+        @extend %pageheading-sm;
+      }
+
+
+      .buttons.manage {
+        text-align: right;
+      }
+
+      @include breakpoint($bp-tablets-portrait) {
+        button {
+          + button {
+            margin-left: 5px;
+          }
+        }
+      }
+    }
+  }
+
+  .heading {
+    p {
+      color: $color-fanstreamm-red;
+    }
+  }
+}

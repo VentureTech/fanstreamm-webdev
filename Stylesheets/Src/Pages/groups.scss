@@ -1,0 +1,40 @@
+@import "../Config/base-import";
+
+#body {
+  .search-bar {
+    .constraints {
+
+      .constraint {
+        margin-left: 0;
+        margin-right: 5px;
+      }
+
+      .event-constraint {
+        display: block;
+        width: 100%;
+        margin-bottom: $vertical-element-spacing;
+
+        .client-selections,
+        .event-selections,
+        .data-range {
+          @include inline;
+          margin-right: 10px;
+        }
+
+        .data-range {
+          .or,
+          .from,
+          .to {
+            @include inline;
+            margin-right: 30px;
+          }
+
+          .from,
+          .to {
+            width: 35%;
+          }
+        }
+      }
+    }
+  }
+}

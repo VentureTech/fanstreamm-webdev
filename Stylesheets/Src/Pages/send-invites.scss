@@ -1,0 +1,122 @@
+@import "../Config/base-import";
+
+#enclosing2 {
+  .step-nav.menu {
+    ul {
+      .mi {
+        .menuitemlabel {
+          &.invite {
+            &:before {
+              background: url("/_resources/dyn/files/32551z9bf33581/_fn/invite-sprite-sm.png") top center no-repeat;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .main-content-con {
+
+    h3 {
+      font-family: $font-stack-black;
+      font-size: 20px;
+      border-bottom: 1px solid $color-lighter-gray;
+      margin: 0 0 10px;
+      padding-bottom: 2px;
+      display: block;
+      font-weight: normal;
+      color: $color-true-black;
+    }
+
+    .title {
+      font-family: $font-stack-bold;
+      color: $color-fanstreamm-red;
+
+      + p {
+        margin-top: 3px;
+        font-family: $font-stack-sans;
+      }
+    }
+
+    .invitees-editor {
+      .invite-prompt {
+        label {
+          font-size: 18px;
+        }
+      }
+      .message-title {
+        label {
+          font-size: 16px;
+          color: #000;
+          font-family: $font-stack-italic;
+        }
+      }
+      .emails {
+        margin-bottom: 20px;
+      }
+      .email-title {
+        label {
+          color: #000;
+          font-size: 16px;
+          font-family: $font-stack-italic;
+        }
+      }
+      .email-prompt {
+        label {
+          font-family: $font-stack-italic;
+        }
+      }
+      .email-title,
+      .email-prompt {
+        @include inline;
+      }
+    }
+
+    .cms-popup-component {
+      @include inline;
+      color: $color-fanstreamm-red;
+      font-family: $font-stack-italic;
+      position: relative;
+      top: -45px;
+
+      &:hover {
+        color: $color-darker-red;
+      }
+    }
+
+    @include breakpoint($bp-tablets-portrait) {
+      @include inlineTop;
+      width: 66%;
+    }
+  }
+
+
+  .sidebar {
+    margin-bottom: 30px;
+
+    .event-view > div > label,
+    .group-info-view label {
+      font-size: 14px;
+    }
+
+    @include breakpoint($bp-tablets-portrait) {
+      @include inlineTop;
+      width: 30%;
+      margin-left: 20px;
+      border-left: 1px solid $color-lighter-gray;
+      padding-left: 20px;
+    }
+  }
+}
+
+div.cms-popup-content {
+  text-align: left !important;
+
+  .inner_con {
+    padding: 10px;
+
+    p {
+      margin: .25em 0;
+    }
+  }
+}
