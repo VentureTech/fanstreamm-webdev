@@ -4,7 +4,6 @@
   margin-bottom: 30px;
 
   .search-constraints {
-
     .name {
       margin-bottom: 10px;
 
@@ -62,6 +61,16 @@
     td, th {
       &.last-column {
         display: none;
+      }
+    }
+  }
+
+  .client-search-page {
+    span {
+      margin: 0 3px;
+
+      &.current {
+        margin-left: 3px;
       }
     }
   }
