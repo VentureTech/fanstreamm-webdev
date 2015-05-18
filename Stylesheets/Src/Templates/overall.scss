@@ -1098,6 +1098,7 @@ form {
   }
 
   .confirm-acct {
+
     .confirm-text {
       font-family: $font-stack-italic;
       background: $color-fanstreamm-red;
@@ -1105,6 +1106,10 @@ form {
       color: $color-true-white;
       font-size: 18px;
       padding: 10px;
+
+      &:empty {
+        padding: 0;
+      }
     }
   }
 
