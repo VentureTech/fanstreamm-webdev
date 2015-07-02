@@ -1,17 +1,25 @@
 @import "../Config/base-import";
 
-.entity-actions {
-  margin-right: 10px;
-  margin-top: 20px;
+form {
+  .entity-actions {
+    margin-right: 10px;
+    margin-bottom: 10px;
+
+    &.actions {
+      button.btn {
+        margin: 0 5px 0 0;
+      }
+    }
+  }
 }
 
 .entity-actions,
 .search-bar {
-  @include inlineTop;
+  @include inlineMiddle;
 
   .actions {
     display: block;
-    margin: 10px 10px 0 0;
+    margin: 10px 5px 0 0;
 
     button.btn {
       float: none;
