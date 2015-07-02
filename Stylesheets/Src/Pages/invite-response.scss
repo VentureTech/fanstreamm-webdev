@@ -1,6 +1,33 @@
 @import "../Config/base-import";
 
 #enclosing2 {
+  .genform.group-logo {
+    margin-bottom: 30px;
+
+    label {
+      display: none;
+    }
+
+    .group-name,
+    .group-logo {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    .group-logo {
+      float: left;
+      margin-right: 30px;
+      margin-top: 0;
+    }
+
+    .group-name {
+      padding-top: 40px;
+      font-family: $font-stack-bold;
+      font-size: 18px;
+    }
+
+  }
+
   .main-content-con {
     @include breakpoint($bp-tablets-portrait) {
       @include inlineTop;
@@ -10,13 +37,19 @@
       border-right: 1px solid $color-lighter-gray;
     }
     @include breakpoint($bp-tablets-landscape) {
-      width: 76%;
+      width: 56%;
     }
   }
 
   .sidebar {
+    .group-description {
+      label {
+        display: none;
+      }
+    }
+
     @include breakpoint($bp-tablets-landscape) {
-      width: 20%;
+      width: 40%;
     }
   }
 }
@@ -43,6 +76,17 @@
     .val {
       display: block;
       width: auto;
+    }
+
+    label {
+      color: $color-true-black;
+      font-family: $font-stack-sans;
+      margin-bottom: 4px;
+      font-size: 14px;
+    }
+
+    .group-title {
+      margin-bottom: 4px;
     }
 
     .actions {
