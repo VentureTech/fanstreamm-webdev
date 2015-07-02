@@ -7,6 +7,11 @@
       .constraint {
         margin-left: 0;
         margin-right: 5px;
+        vertical-align: top;
+
+        label {
+          display: block;
+        }
       }
 
       .event-constraint {
