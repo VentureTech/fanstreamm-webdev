@@ -75,3 +75,20 @@
     }
   }
 }
+
+.pages.controls {
+  > a,
+  > span {
+    + span,
+    + a {
+      margin-left: 5px;
+    }
+  }
+}
+
+.mp-controls.controls {
+  margin: 0 5px;
+  a + a {
+    margin-left: 5px;
+  }
+}
