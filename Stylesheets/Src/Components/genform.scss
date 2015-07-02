@@ -643,7 +643,7 @@
       }
 
       .tickets {
-        width: 26%;
+        width: 20%;
         font-family: $font-stack-bold;
         font-size: 16px;
 
@@ -684,7 +684,7 @@
       }
 
       .name-or-email {
-        width: 50%;
+        width: 45%;
         word-break: break-all;
       }
 
@@ -692,6 +692,15 @@
         width: 19%;
         font-family: $font-stack-bold;
       }
+
+      .ticket-info {
+        width: 20%;
+      }
+
+      .tickets {
+        width: 10%;
+      }
+
 
     }
 
@@ -766,6 +775,12 @@
     .actions {
       @include pie-clearfix;
       margin-top: 10px;
+    }
+
+    td {
+      .actions {
+        margin-top: 0;
+      }
     }
 
     .buttons.confirm {
