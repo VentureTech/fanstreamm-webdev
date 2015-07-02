@@ -1,5 +1,80 @@
 @import "../Config/base-import";
 
+.genform {
+  input,
+  textarea,
+  select {
+    width: auto;
+    min-width: 300px;
+    max-width: 100%;
+
+    &[type="checkbox"] {
+      min-width: 0;
+    }
+  }
+
+  .ticket-info-editor {
+    input {
+      min-width: 0;
+    }
+  }
+
+  .picture-con {
+    button {
+      margin-top: 12px;
+    }
+  }
+
+  .timeZone {
+    select {
+      display: block;
+      margin-top: 5px;
+    }
+
+    .warning {
+      display: inline-block;
+    }
+  }
+
+  .actions {
+    &.add-new-officer {
+      text-align: center;
+    }
+  }
+}
+
+.client-officer-group {
+  .group-title {
+    display: block;
+    padding-bottom: 3px;
+    margin-bottom: 12px;
+  }
+}
+
+.selected-officer {
+  display: table;
+  width: 100%;
+
+  .selected-officer-header,
+  .selected-officer-row {
+    display: table-row;
+
+    > div {
+      display: table-cell;
+    }
+  }
+
+  .selected-officer-header {
+    font-family: $font-stack-bold;
+  }
+
+  .selected-officer-row {
+    > div {
+      padding: 5px 0;
+    }
+  }
+}
+
 .client-information-group {
   .group-content {
     .logo {
@@ -11,6 +86,20 @@
         height: auto;
         margin-bottom: $vertical-element-spacing;
       }
+    }
+  }
+}
+
+.officer-editor {
+  > div {
+    + div {
+      margin-top: 20px;
+    }
+  }
+
+  .phone_number_form {
+    td {
+      padding: 0;
     }
   }
 }
