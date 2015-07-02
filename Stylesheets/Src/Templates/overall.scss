@@ -56,6 +56,13 @@ table {
   border: 1px solid $color-light-white;
   border-collapse: collapse;
 
+  tr {
+    &.odd {
+      td {
+        background: $color-grayish-white;
+      }
+    }
+  }
 
   th {
     background: $color-grayish-white;
