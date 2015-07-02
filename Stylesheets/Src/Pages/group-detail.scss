@@ -80,6 +80,15 @@
       }
     }
 
+    .ticket-details.genform {
+      .ticket-info-editor {
+        > div {
+          width: 30%;
+          padding: 5px 5px 5px 0;
+        }
+      }
+    }
+
     @include breakpoint($bp-tablets-portrait) {
       @include inlineTop;
       border-left: 1px solid $color-lighter-gray;
