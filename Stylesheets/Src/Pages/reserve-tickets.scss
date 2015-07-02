@@ -44,6 +44,11 @@
         display: block;
       }
     }
+
+    .ticket-infos-table {
+      margin-top: 5px;
+    }
+
     .claimed-tickets {
       font-family: $font-stack-bold;
       font-size: 21px;
@@ -63,11 +68,13 @@
         margin-bottom: -1px;
       }
     }
+
     .address {
       .chart-label {
         margin-bottom: 5px;
       }
     }
+
     @include breakpoint($bp-tablets-portrait) {
       @include inlineTop;
       width: 62%;
@@ -106,6 +113,13 @@
     .group-info-view {
       label {
         font-size: 14px;
+      }
+    }
+
+    .ticket-info-editor {
+      > div {
+        width: 30%;
+        padding: 5px 5px 5px 0;
       }
     }
 
