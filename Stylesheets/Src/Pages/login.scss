@@ -86,6 +86,26 @@ a {
         }
       }
 
+      .password-reset {
+        .fields {
+          .field {
+            display: block;
+
+            + .field {
+              margin-top: 20px;
+              margin-left: 0;
+            }
+          }
+        }
+
+        .actions {
+          text-align: left;
+          display: block;
+          margin-left: 0;
+          margin-top: 20px;
+        }
+      }
+
 
       @include breakpoint($bp-tablets-portrait) {
         margin: 0;
