@@ -1,5 +1,39 @@
 @import "../Config/base-import";
 
+
+.genform {
+  input,
+  textarea,
+  select {
+    width: auto;
+    min-width: 300px;
+    max-width: 100%;
+  }
+
+  .ticket-info-editor {
+    input {
+      min-width: 0;
+    }
+  }
+
+  .timeZone {
+    select {
+      display: block;
+      margin-top: 5px;
+    }
+
+    .warning {
+      display: inline-block;
+    }
+  }
+
+  .picture-con {
+    button {
+      margin-top: 12px;
+    }
+  }
+
+}
 .event-details {
   .actions.back {
     margin-bottom: 20px;
