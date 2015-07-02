@@ -1,0 +1,77 @@
+@import "../Config/base-import";
+
+.genform {
+  input {
+    width: auto;
+  }
+}
+
+.group-editor {
+  > div {
+    + div {
+      margin-top: 30px;
+    }
+  }
+}
+.group-owner-info,
+.officer-group {
+  .actions {
+    text-align: left;
+    margin-top: 5px;
+  }
+}
+
+.selected-officer {
+  display: table;
+  width: 100%;
+
+  .selected-officer-header,
+  .selected-officer-row {
+    display: table-row;
+
+    > div {
+      display: table-cell;
+    }
+  }
+
+  .selected-officer-header {
+    font-family: $font-stack-bold;
+  }
+
+  .selected-officer-row {
+    > div {
+      padding: 5px 0;
+    }
+  }
+}
+
+.windowcontent {
+  > div {
+    + div {
+      margin-top: 20px;
+    }
+  }
+
+  .phone_number_form {
+    td {
+      padding: 0;
+    }
+  }
+
+  .pages.controls {
+    > a,
+    > span {
+      + span,
+      + a {
+        margin-left: 5px;
+      }
+    }
+  }
+
+  .mp-controls.controls {
+    margin: 0 5px;
+    a + a {
+      margin-left: 5px;
+    }
+  }
+}
